@@ -38,7 +38,7 @@ def get_words():
   words = requests.get("https://api.tianapi.com/caihongpi/index?key=e7b26dd1be2bc86c14f3e2da5447bbdb")
   if words.status_code != 200:
     return get_words()
-  return words.json()['newslist']['content']
+  return words.json()['newslist']
 
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
